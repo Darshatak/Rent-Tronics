@@ -1,0 +1,193 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Welcome-<?php echo $_SESSION['username']?> </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="/static/css/themify-icons.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <!-- Main css -->
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <!-- Nav Menu -->
+    {{> navbar data= details}}
+
+
+    <header class="bg-gradient" id="home">
+        <div class="container mt-5">
+ 
+        <h3 style="color: white;">Welcome , Sir </h3>
+            <p class="tagline">{{details.HeaderDiscription}}</p>
+        </div>
+        <div class="img-holder mt-13"><img src="{{details.HeaderImg}}" alt="phone" class="img-fluid"></div>
+    </header>
+
+    <div class="client-logos my-5">
+        <div class="container text-center">
+            <img src="{{details.HeaderImg2}}" alt="client logos" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="section light-bg" id="features">
+
+
+        <div class="container">
+
+            <div class="section-title">
+                <small>We Provide Following</small>
+                <h3>Features you love</h3>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                <a class="nav-link.active" href="{{details.url1}}">
+                        <div class="card features">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h4 class="card-title">{{details.l1Name}}</h4>
+                                        <p class="card-text">{{details.l1Dissc}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-12 col-lg-4">
+                <a class="nav-link.active" href="{{details.url2}}">
+                        <div class="card features">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h4 class="card-title">{{details.l2Name}}</h4>
+                                        <p class="card-text">{{details.l2Dissc}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                <a class="nav-link.active" href="{{details.url3}}">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4 class="card-title">{{details.l3Name}}</h4>
+                                        <p class="card-text">{{details.l3Dissc}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+    </a>
+
+
+    <!-- // end .section -->
+
+
+    
+    <!-- // end .section -->
+
+
+
+<div class="section bg-gradient" id="contact">
+        <div class=" container ">
+            <div class="call-to-action ">
+
+                <div class="box-icon "><span><img src="/static/images/phone.png" style="height: 45px;"></span></div>
+                <div class="container" style="display: flex; flex-direction: column; align-items: center; ">
+                    <div class="form-group col-md-5">
+                        <h3>Contact us</h3>
+                        <form action="/process-contact-form" method="POST" style="display:grid; ">
+
+                            <input type="text" id="firstname" name="Name" placeholder="Name " style="border-radius: 10px;" required /><br>
+                            <input type="number" id="Mobile" name="Mobile" placeholder="Mobile " style="border-radius: 10px;" required><br>                           
+                            <input type="email" id="email" name="email" placeholder="Email ID " style="border-radius: 10px;" required>
+                            <br>
+                            <textarea id="query" name="query" placeholder="Give us your details " style="height:200px;border-radius: 10px;" required></textarea>
+                            <br>
+                            <input type="submit" id="submit" value="Submit" style="border-radius: 40px; ">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+    <div class="light-bg py-5 ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-6 text-center text-lg-left ">
+                    <p class="mb-2 "> <span><img src="/static/images/address.png" style="height: 35px;"></span>{{details.Address}}</p>
+                    <div class=" d-block d-sm-inline-block ">
+                        <p class="mb-2 ">
+                            <span><img src="/static/images/mail.png" style="height: 25px;"></span> <a class="mr-4 " href="mailto:vyasdarshatak15866@gmail.com ">{{details.Email}}</a>
+                        </p>
+                    </div>
+                    <div class="d-block d-sm-inline-block ">
+                        <p class="mb-0 ">
+                            <span><img src="/static/images/phone.png" style="height: 25px;"></span> <a href="tel:51836362800 ">{{details.Mobile}}</a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="social-icons ">
+                        <a href="https://www.facebook.com/darshatakvyas" target="_blank"><span ><img src="/static/images/insta.png" style="height: 25px;"></span></a>
+                        <a href="https://twitter.com/darshatakvyas" target="_blank"><span ><img src="/static/images/twitter.png" style="height: 35px;"></span></a>
+                        <a href="https://www.instagram.com/darshatak_vyas/?hl=en" target="_blank"><span><img src="/static/images/Facebook.png" style="height: 25px;"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+    <footer class="my-5 text-center ">
+        <p class="mb-2 "><small>COPYRIGHT © 2021. ALL RIGHTS RESERVED BY <a href="/login/LAR/T&C.html ">Darshatak</a></small></p>
+    </footer>
+
+
+    <!-- jQuery and Bootstrap -->
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/static/js/script.js"></script>
+
+
+</body>
+
+</html>
